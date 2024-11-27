@@ -33,12 +33,18 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            Image.asset(
+              'assets/svg/Ellipse.png',
+              width: 200,
+              height: 200,
+
+            ),
+            const Text(
               'Hi there!',
               style: TextStyle(
                 fontSize: 40,
