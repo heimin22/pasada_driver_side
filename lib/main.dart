@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() => runApp(const MyApp());
 
@@ -38,18 +39,50 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              'assets/svg/Ellipse.png',
-              width: 200,
-              height: 200,
-
+            Container(
+              margin: const EdgeInsets.only(top: 130),
+              child: SvgPicture.asset('assets/svg/Ellipse.svg'),
+              width: 130,
+              height: 130,
             ),
-            const Text(
-              'Hi there!',
-              style: TextStyle(
-                fontSize: 40,
-                fontFamily: 'Inter',
-                fontWeight: FontWeight.w700,
+            Container(
+              margin: const EdgeInsets.only(top: 70),
+              child: const Text(
+                'Hi there!',
+                style: TextStyle(
+                  fontSize: 40,
+                  fontFamily: 'Inter',
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+            const SizedBox(height: 8),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 30),
+              child: Text(
+                'Welcome to Pasada Driver',
+                style: TextStyle(
+                  fontFamily: 'Inter',
+                ),
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 180),
+              child: ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFF4AB00C),
+                  minimumSize: Size(260, 60),
+                ),
+                child: const Text(
+                  'Log in',
+                  style: TextStyle(
+                    color: Color(0xFFF2F2F2),
+                    fontWeight: FontWeight.w600,
+                    fontSize: 20,
+                    fontFamily: 'Inter',
+                  ),
+                ),
               ),
             ),
           ],
@@ -58,3 +91,5 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+
