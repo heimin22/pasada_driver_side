@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pasada_driver_side/login.dart';
 
 void main() => runApp(const MyApp());
 
@@ -41,9 +42,9 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Container(
               margin: const EdgeInsets.only(top: 130),
-              child: SvgPicture.asset('assets/svg/Ellipse.svg'),
               width: 130,
               height: 130,
+              child: SvgPicture.asset('assets/svg/Ellipse.svg'),
             ),
             Container(
               margin: const EdgeInsets.only(top: 70),
@@ -67,12 +68,17 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Container(
-              margin: const EdgeInsets.only(top: 180),
+              margin: const EdgeInsets.only(top: 250),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const LogIn()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFF4AB00C),
-                  minimumSize: Size(260, 60),
+                  backgroundColor: const Color(0xFF4AB00C),
+                  minimumSize: const Size(240, 45),
                 ),
                 child: const Text(
                   'Log in',
@@ -91,5 +97,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-
