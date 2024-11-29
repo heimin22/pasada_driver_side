@@ -76,9 +76,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     MaterialPageRoute(builder: (context) => const LogIn()),
                   );
                 },
-                style: ElevatedButton.styleFrom(
+                  style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF4AB00C),
                   minimumSize: const Size(240, 45),
+                  shadowColor: Colors.black,
                 ),
                 child: const Text(
                   'Log in',
