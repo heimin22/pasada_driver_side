@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pasada_driver_side/NavigationPages/activity_page.dart';
 import 'package:pasada_driver_side/NavigationPages/home_page.dart';
@@ -40,32 +41,77 @@ class MainPageState extends State<MainPage> {
         onTap: onTap,
         currentIndex: currentIndex,
         unselectedItemColor: Colors.grey.withOpacity(.8),
-        selectedItemColor:  const Color(0xFF5F3FC4),
+        selectedItemColor: const Color(0xFF5F3FC4),
         showSelectedLabels: true,
         showUnselectedLabels: true,
 
         selectedFontSize: 14,
         unselectedFontSize: 0,
-        items: const [
+        items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              // SvgPicture.asset('assets/svg/homeIcon.svg'),
+              icon: currentIndex == 0
+                  ? SvgPicture.asset(
+                      'assets/svg/homeSelectedIcon.svg',
+                      height: 24,
+                      width: 24,
+                    )
+                  : SvgPicture.asset(
+                      'assets/svg/homeIcon.svg',
+                      height: 24,
+                      width: 24,
+                    ),
               label: 'Home'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.history),
-              // SvgPicture.asset('assets/svg/activityIcon.svg'),
+              icon: currentIndex == 1
+                  ? SvgPicture.asset(
+                      'assets/svg/activitySelectedIcon.svg',
+                      height: 24,
+                      width: 24,
+                    )
+                  : SvgPicture.asset(
+                      'assets/svg/activityIcon.svg',
+                      height: 24,
+                      width: 24,
+                    ),
               label: 'Activity'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.notifications),
-              // SvgPicture.asset('assets/svg/notificationIcon.svg'),
+              icon: currentIndex == 2
+                  ? SvgPicture.asset(
+                      'assets/svg/notificationSelectedIcon.svg',
+                      height: 24,
+                      width: 24,
+                    )
+                  : SvgPicture.asset(
+                      'assets/svg/notificationIcon.svg',
+                      height: 24,
+                      width: 24,
+                    ),
               label: 'Notification'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              // SvgPicture.asset('assets/svg/profileIcon.svg'),
+              icon: currentIndex == 3
+                  ? SvgPicture.asset(
+                      'assets/svg/profileSelectedIcon.svg',
+                      height: 24,
+                      width: 24,
+                    )
+                  : SvgPicture.asset(
+                      'assets/svg/profileIcon.svg',
+                      height: 24,
+                      width: 24,
+                    ),
               label: 'Profile'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              // SvgPicture.asset('assets/svg/settingsIcon.svg'),
+              icon: currentIndex == 4
+                  ? SvgPicture.asset(
+                      'assets/svg/settingsSelectedIcon.svg',
+                      height: 24,
+                      width: 24,
+                    )
+                  : SvgPicture.asset(
+                      'assets/svg/settingsIcon.svg',
+                      height: 24,
+                      width: 24,
+                    ),
               label: 'Settings'),
         ],
       ),
