@@ -62,6 +62,20 @@ flutter:
   
   assets:
     - assets/svg/Ellipse.svg
+    - assets/svg/otherOptions.svg
+    - assets/svg/lines.svg
+    - assets/svg/otherOptionsOptimized.svg
+    - assets/svg/googleIcon.svg
+    - assets/svg/homeIcon.svg
+    - assets/svg/activityIcon.svg
+    - assets/svg/notificationIcon.svg
+    - assets/svg/profileIcon.svg
+    - assets/svg/settingsIcon.svg
+    - assets/svg/homeSelectedIcon.svg
+    - assets/svg/activitySelectedIcon.svg
+    - assets/svg/notificationSelectedIcon.svg
+    - assets/svg/accountSelectedIcon.svg
+    - assets/svg/settingsSelectedIcon.svg
 
   # To add assets to your application, add an assets section, like this:
   # assets:

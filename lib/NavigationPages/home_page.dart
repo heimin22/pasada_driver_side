@@ -1,22 +1,12 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
 
-class Homepage extends StatefulWidget {
-  const Homepage({super.key});
-
+class HomePage extends StatefulWidget {
   @override
-  HomepageState createState() => HomepageState();
+  HomePageState createState() => HomePageState();
 }
 
-class HomepageState extends State<Homepage> {
+class HomePageState extends State<HomePage> {
   String _searchText = "";
-  int _selectedIndex = 0; // To track the currently selected bottom nav item
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -83,35 +73,25 @@ class HomepageState extends State<Homepage> {
         ),
       ),
 
-      //BOTTOM NAVIGATION
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex, // Track the selected index
-        onTap: _onItemTapped, // Handle tap on items
-        type: BottomNavigationBarType.fixed, // Keeps icons and text visible
-        selectedItemColor: Colors.grey[900], // Active icon color
-        unselectedItemColor: Colors.grey, // Inactive icon color
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
-            label: 'Alerts',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-          ),
-        ],
-      ),
+      // // Bottom Navigation Bar
+      // bottomNavigationBar: BottomNavigationBar(
+      //   currentIndex: _selectedIndex,
+      //   onTap: _onItemTapped,
+      //   items: const [
+      //     BottomNavigationBarItem(
+      //       label: 'Home',
+      //       icon: Icon(Icons.home),
+      //     ),
+      //     BottomNavigationBarItem(
+      //       label: 'Activity',
+      //       icon: Icon(Icons.local_activity),
+      //     ),
+      //     BottomNavigationBarItem(
+      //       label: 'Profile',
+      //       icon: Icon(Icons.person),
+      //     ),
+      //   ],
+      // ),
     );
   }
 }

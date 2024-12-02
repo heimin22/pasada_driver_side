@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pasada_driver_side/homepage.dart';
+// import 'package:pasada_driver_side/NavigationPages/home_page.dart';
+import 'package:pasada_driver_side/NavigationPages/main_page.dart';
 
 class LogIn extends StatelessWidget {
   const LogIn({super.key});
@@ -150,7 +151,7 @@ class LogIn extends StatelessWidget {
                     onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Homepage()),
+                    MaterialPageRoute(builder: (context) => const MainPage()),
                   );
                 },
                     style: ElevatedButton.styleFrom(
