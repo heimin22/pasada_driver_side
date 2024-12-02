@@ -40,13 +40,15 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+
+            //LOGO
             Container(
               margin: const EdgeInsets.only(top: 130),
               width: 130,
               height: 130,
               child: SvgPicture.asset('assets/svg/Ellipse.svg'),
             ),
-            // sample
+            //WELCOME MESSAGE
             Container(
               margin: const EdgeInsets.only(top: 70),
               child: const Text(
@@ -68,6 +70,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
+
+            //LOG IN BUTTON
             Container(
               margin: const EdgeInsets.only(top: 250),
               child: ElevatedButton(
