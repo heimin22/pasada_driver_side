@@ -20,7 +20,7 @@ class LogIn extends StatelessWidget {
               //HEADER
               Container(
                 alignment: Alignment.centerLeft,
-                margin: const EdgeInsets.only(top: 60),
+                // margin: const EdgeInsets.only(top: 60),
                 width: 60,
                 height: 60,
                 child: SvgPicture.asset('assets/svg/Ellipse.svg'),
@@ -36,7 +36,7 @@ class LogIn extends StatelessWidget {
                 ),
               ),
 
-              //ENTER DRIVER ID PART
+              //DRIVER ID PART
               Container(
                 margin: const EdgeInsets.only(top: 120),
                 child: Column(
@@ -82,6 +82,8 @@ class LogIn extends StatelessWidget {
                   ],
                 ),
               ),
+
+              //PASSWORD PART
               Container(
                 margin: const EdgeInsets.only(top: 20),
                 child: Column(
@@ -141,30 +143,30 @@ class LogIn extends StatelessWidget {
                 ),
               ),
 
-              Container(
-              margin: const EdgeInsets.only(top: 150),
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {
-                  
-                },
-                  style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF4AB00C),
-                  minimumSize: const Size(240, 45),
-                  shadowColor: Colors.black,
-                ),
-                child: const Text(
-                  'Log in',
-                  style: TextStyle(
-                    color: Color(0xFFF2F2F2),
-                    fontWeight: FontWeight.w600,
-                    fontSize: 20,
-                    fontFamily: 'Inter',
+              //LOG IN BUTTON
+              Flexible(
+                child: Container(
+                  margin: const EdgeInsets.only(top: 120),
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF5F3FC4),
+                      minimumSize: const Size(240, 45),
+                      shadowColor: Colors.black,
+                    ),
+                    child: const Text(
+                      'Log in',
+                      style: TextStyle(
+                        color: Color(0xFFF2F2F2),
+                        fontWeight: FontWeight.w600,
+                        fontSize: 20,
+                        fontFamily: 'Inter',
+                      ),
+                    ),
                   ),
                 ),
               ),
-            ),
-
             ],
           ),
         ),
