@@ -129,10 +129,7 @@ class LogIn extends StatelessWidget {
                   ],
                 ),
               ),
-              // Container(
-              //   child: ,
-              // )
-
+              
               //FORGOT PASSWORD BUTTON
               Container(
                 margin: const EdgeInsets.only(top: 5),
